@@ -40,8 +40,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+}
+
+body {
+  background-color: var(--box-background-color);
+}
+
+button {
+  background-color: var(--main-green-color);
+  color: var(--main-light-color);
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  margin: 20px 5px;
+}
+
+button:hover {
+  background-color: var(--main-dark-color);
+  color: var(--main-light-color);
+  transform: translateY(-5px);
+}
+
+#bentoContainer {
   margin-bottom: 15px;
+  max-width: 595px;
+  padding: 15px 20px;
+  background-color: var(--main-light-color);
 }
 
 .bentoFlexBox {
@@ -52,6 +84,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--main-light-color);
 }
 
 .resumeBox {
