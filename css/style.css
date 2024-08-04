@@ -35,14 +35,11 @@
   height: 21px;
 }
 
-#app {
+.mainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-body {
   background-color: var(--box-background-color);
 }
 

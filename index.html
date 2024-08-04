@@ -12,246 +12,261 @@
   </head>
   <body>
     <div id="app">
-      <button type="button" id="downloadBtn">Download PDF</button>
-      <div id="bentoContainer">
-        <div class="bentoFlexBox">
-          <div class="top resumeRow">
-            <div class="profileImg resumeBox">
-              <img src="/profileImgKarthik.png" />
-            </div>
-
-            <div class="profileName resumeBox">
-              <p class="greetingPhrase">Hello 👋🏻 I’m</p>
-              <div class="yourInfo">
-                <p id="yourName">Karthik SR</p>
-                <p id="yourRole">UX/UI Designer</p>
-              </div>
-            </div>
-
-            <div class="profileLanguages resumeBox">
-              <div class="title">
-                <p class="nameTitle">Languages</p>
-              </div>
-              <div class="listLenguages">
-                <div class="nameLenguage">
-                  <p>English</p>
-                  <p>Malayalam</p>
-                  <p>Hindi</p>
-                </div>
-                <div class="levelLenguage">
-                  <hr class="progressBar" />
-                  <div class="progressBar"></div>
-                  <div class="progressBar bottomBar"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="center resumeRow">
-            <div class="profileExperience resumeBox">
-              <div class="title">
-                <p class="nameTitle">Experience</p>
+      <div class="mainContainer">
+        <div id="btnContainer">
+          <button type="button" id="downloadBtn">Download PDF</button>
+          <button type="button" id="editBtn">Edit</button>
+          <button type="button" style="display: none" id="saveBtn">Save</button>
+          <button
+            type="button"
+            style="background-color: #d92f28; display: none"
+            id="cancelBtn"
+          >
+            Cancel
+          </button>
+        </div>
+        <div id="bentoContainer">
+          <div class="bentoFlexBox">
+            <div class="top resumeRow">
+              <div class="profileImg resumeBox">
+                <img src="/profileImgKarthik.png" />
               </div>
 
-              <div class="jobList">
-                <div id="lastJob" class="jobBox">
-                  <div class="topBar">
-                    <p class="date">Jun. 2023 - Present</p>
-                    <div class="tag">
-                      <p>most recent</p>
-                    </div>
-                  </div>
-                  <div class="contentExp">
-                    <div class="jobInfo">
-                      <p class="roleName">Marketing Manager</p>
-                      <div class="aboutJob lastJobDescr">
-                        <p class="companyName">Pankayam</p>
-                        <p class="divider">|</p>
-                        <p class="info">Full-time</p>
-                      </div>
-                    </div>
-                    <div class="featuredPoints">
-                      <ul class="points">
-                        <li>
-                          Strategy development and planning of campaigns that promote the
-                          business and generate genuine traffic
-                        </li>
-                        <li>SEO Content Creation for Blogs, Website, Social media</li>
-                      </ul>
-                    </div>
-                  </div>
+              <div class="profileName resumeBox">
+                <p class="greetingPhrase">Hello 👋🏻 I’m</p>
+                <div class="yourInfo">
+                  <p id="yourName" class="editable">Karthik SR</p>
+                  <p id="yourRole" class="editable">UX/UI Designer</p>
                 </div>
+              </div>
 
-                <div class="jobBox otherJob">
-                  <div class="topBar">
-                    <p class="date">2017 - Present</p>
-                  </div>
-                  <div class="contentExp">
-                    <div class="jobInfo">
-                      <p class="roleName">Graphic / Web designer</p>
-                      <div class="aboutJob otherJobDesr">
-                        <p class="info">Freelance</p>
-                      </div>
-                    </div>
-                    <div class="featuredPoints">
-                      <ul class="points">
-                        <li>
-                          Development of internal projects from scratch, product design of
-                          brands
-                        </li>
-                        <li>Landing page, webapps and hybrid apps</li>
-                        <li>
-                          Coordinating with outside agencies, art services, web designer,
-                          marketing, printers, and colleagues as necessary.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="jobBox otherJob">
-                  <div class="topBar">
-                    <p class="date">Sep. 2021 - Jun. 2023</p>
-                  </div>
-                  <div class="contentExp">
-                    <div class="jobInfo">
-                      <p class="roleName">Legal Assistant</p>
-                      <div class="aboutJob otherJobDesr">
-                        <p class="info">Law Firm</p>
-                        <p>|</p>
-                        <p>Intern</p>
-                      </div>
-                    </div>
-                    <div class="featuredPoints">
-                      <ul class="points">
-                        <li>
-                          Provide administrative support to lawyer and enhance office
-                          effectiveness
-                        </li>
-                        <li>Handle communication with clients, witnesses etc.</li>
-                        <li>
-                          Repare case briefs and summarize depositions, interrogatories
-                          and testimony
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="profileTools resumeBox">
-              <div class="title">
-                <p class="nameTitle">Tools</p>
-              </div>
-              <!-- <div id="frame-one"> -->
-              <div class="toolsList">
-                <div class="toolsWrapper">
-                  <div class="toolsTag">design</div>
-                  <div class="toolsBox">
-                    <img src="public\tools\logoFigma.svg" alt="logoFigma" />
-                    <img src="public\tools\logoPhotoshop.svg" alt="logo" />
-                    <img src="public\tools\logoAdobe.svg" alt="logo" />
-                    <img src="public\tools\logoPremiere.svg" alt="logo" />
-                    <img src="public\tools\logoNotion.svg" alt="logo" />
-                    <img src="public\tools\logoMeet.svg" alt="logo" />
-                  </div>
-                </div>
-                <div class="toolsWrapper">
-                  <div class="toolsTag">no-code</div>
-                  <div class="toolsBox">
-                    <img src="public\tools\logoZapìer 1.svg" alt="logo" />
-                    <img src="public\tools\logoWebflow.svg" alt="logo" />
-                    <img src="public\tools\logoFramer.svg" alt="logo" />
-                    <img src="public\tools\logoWordpress.svg" alt="logo" />
-                  </div>
-                </div>
-                <div class="toolsWrapper">
-                  <div class="toolsTag">artoficial intelligence</div>
-                  <div class="toolsBox">
-                    <img src="public\tools\logoChatGPT 1.svg" alt="logo" />
-                    <img src="public\tools\logoCopilot 1.svg" alt="logo" />
-                    <img src="public\tools\logoMidjourney 1.svg" alt="logo" />
-                    <img src="public\tools\logoMidjourney 3.png" alt="logo" />
-                  </div>
-                </div>
-              </div>
-              <!-- </div> -->
-            </div>
-          </div>
-
-          <div class="bottom resumeRow">
-            <div class="profileEducation resumeBox">
-              <div class="title">
-                <p class="nameTitle">Education</p>
-              </div>
-              <div class="educationContent">
-                <div id="column-1">
-                  <div id="lastEducation" class="educationBox">
-                    <div class="topBar">
-                      <h3 class="educationYear">2023</h3>
-                      <img src="public\Vector.svg" alt="heart" />
-                    </div>
-                    <div class="educationItem">
-                      <h3 class="educationBoxTitle">UI/UX</h3>
-                      <div class="tags">
-                        <p>#UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux</p>
-                      </div>
-                    </div>
-                    <h4 class="schoolName">Coursera</h4>
-                  </div>
-                  <div class="educationBox">
-                    <div class="topBar">
-                      <h3 class="educationYear">2017</h3>
-                    </div>
-                    <div class="educationItem">
-                      <h3 class="educationBoxTitle">Graphic design</h3>
-                      <div class="tags">
-                        <p>#branding #web #illustration #adobe</p>
-                      </div>
-                    </div>
-                    <h4 class="schoolName">Coursera</h4>
-                  </div>
-                </div>
-                <div id="column-2">
-                  <div class="educationBox">
-                    <div class="topBar">
-                      <h3 class="educationYear">2017 - 2022</h3>
-                    </div>
-                    <div class="educationItem">
-                      <h3 class="educationBoxTitle">Law</h3>
-                      <div class="tags">
-                        <p>#law #legalStudies #contracts #internationalLaws</p>
-                      </div>
-                    </div>
-                    <h4 class="schoolName">University of Kerala</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="profileExtra">
-              <div class="interestsBox resumeBox">
+              <div class="profileLanguages resumeBox">
                 <div class="title">
-                  <p class="nameTitle">Interests</p>
+                  <p class="nameTitle">Languages</p>
                 </div>
-                <div class="interestsList">
-                  <div class="interestsTag">branding</div>
-                  <div class="interestsTag">design</div>
-                  <div class="interestsTag">photography</div>
-                  <div class="interestsTag">artificial intelligence</div>
-                  <div class="interestsTag">illustration</div>
-                  <div class="interestsTag">typography</div>
-                  <div class="interestsTag">social networks</div>
-                  <div class="interestsTag">research</div>
-                  <div class="interestsTag">dron pilot</div>
-                  <div class="interestsTag">games</div>
+                <div class="listLenguages">
+                  <div class="nameLenguage">
+                    <p>English</p>
+                    <p>Malayalam</p>
+                    <p>Hindi</p>
+                  </div>
+                  <div class="levelLenguage">
+                    <hr class="progressBar" />
+                    <div class="progressBar"></div>
+                    <div class="progressBar bottomBar"></div>
+                  </div>
                 </div>
               </div>
-              <div class="contactBox resumeBox">
+            </div>
+
+            <div class="center resumeRow">
+              <div class="profileExperience resumeBox">
                 <div class="title">
-                  <p class="nameTitle">
-                    Let´s chat! I´m ready to work on excinting projects
-                  </p>
+                  <p class="nameTitle">Experience</p>
                 </div>
-                <div class="contactInfo">srkarthik.designscape@gmail.com</div>
+
+                <div class="jobList">
+                  <div id="lastJob" class="jobBox">
+                    <div class="topBar">
+                      <p class="date">Jun. 2023 - Present</p>
+                      <div class="tag">
+                        <p>most recent</p>
+                      </div>
+                    </div>
+                    <div class="contentExp">
+                      <div class="jobInfo">
+                        <p class="roleName">Marketing Manager</p>
+                        <div class="aboutJob lastJobDescr">
+                          <p class="companyName">Pankayam</p>
+                          <p class="divider">|</p>
+                          <p class="info">Full-time</p>
+                        </div>
+                      </div>
+                      <div class="featuredPoints">
+                        <ul class="points">
+                          <li>
+                            Strategy development and planning of campaigns that promote
+                            the business and generate genuine traffic
+                          </li>
+                          <li>SEO Content Creation for Blogs, Website, Social media</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="jobBox otherJob">
+                    <div class="topBar">
+                      <p class="date">2017 - Present</p>
+                    </div>
+                    <div class="contentExp">
+                      <div class="jobInfo">
+                        <p class="roleName">Graphic / Web designer</p>
+                        <div class="aboutJob otherJobDesr">
+                          <p class="info">Freelance</p>
+                        </div>
+                      </div>
+                      <div class="featuredPoints">
+                        <ul class="points">
+                          <li>
+                            Development of internal projects from scratch, product design
+                            of brands
+                          </li>
+                          <li>Landing page, webapps and hybrid apps</li>
+                          <li>
+                            Coordinating with outside agencies, art services, web
+                            designer, marketing, printers, and colleagues as necessary.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobBox otherJob">
+                    <div class="topBar">
+                      <p class="date">Sep. 2021 - Jun. 2023</p>
+                    </div>
+                    <div class="contentExp">
+                      <div class="jobInfo">
+                        <p class="roleName">Legal Assistant</p>
+                        <div class="aboutJob otherJobDesr">
+                          <p class="info">Law Firm</p>
+                          <p>|</p>
+                          <p>Intern</p>
+                        </div>
+                      </div>
+                      <div class="featuredPoints">
+                        <ul class="points">
+                          <li>
+                            Provide administrative support to lawyer and enhance office
+                            effectiveness
+                          </li>
+                          <li>Handle communication with clients, witnesses etc.</li>
+                          <li>
+                            Repare case briefs and summarize depositions, interrogatories
+                            and testimony
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profileTools resumeBox">
+                <div class="title">
+                  <p class="nameTitle">Tools</p>
+                </div>
+                <!-- <div id="frame-one"> -->
+                <div class="toolsList">
+                  <div class="toolsWrapper">
+                    <div class="toolsTag">design</div>
+                    <div class="toolsBox">
+                      <img src="public\tools\logoFigma.svg" alt="logoFigma" />
+                      <img src="public\tools\logoPhotoshop.svg" alt="logo" />
+                      <img src="public\tools\logoAdobe.svg" alt="logo" />
+                      <img src="public\tools\logoPremiere.svg" alt="logo" />
+                      <img src="public\tools\logoNotion.svg" alt="logo" />
+                      <img src="public\tools\logoMeet.svg" alt="logo" />
+                    </div>
+                  </div>
+                  <div class="toolsWrapper">
+                    <div class="toolsTag">no-code</div>
+                    <div class="toolsBox">
+                      <img src="public\tools\logoZapìer 1.svg" alt="logo" />
+                      <img src="public\tools\logoWebflow.svg" alt="logo" />
+                      <img src="public\tools\logoFramer.svg" alt="logo" />
+                      <img src="public\tools\logoWordpress.svg" alt="logo" />
+                    </div>
+                  </div>
+                  <div class="toolsWrapper">
+                    <div class="toolsTag">artoficial intelligence</div>
+                    <div class="toolsBox">
+                      <img src="public\tools\logoChatGPT 1.svg" alt="logo" />
+                      <img src="public\tools\logoCopilot 1.svg" alt="logo" />
+                      <img src="public\tools\logoMidjourney 1.svg" alt="logo" />
+                      <img src="public\tools\logoMidjourney 3.png" alt="logo" />
+                    </div>
+                  </div>
+                </div>
+                <!-- </div> -->
+              </div>
+            </div>
+
+            <div class="bottom resumeRow">
+              <div class="profileEducation resumeBox">
+                <div class="title">
+                  <p class="nameTitle">Education</p>
+                </div>
+                <div class="educationContent">
+                  <div id="column-1">
+                    <div id="lastEducation" class="educationBox">
+                      <div class="topBar">
+                        <h3 class="educationYear">2023</h3>
+                        <img src="public\Vector.svg" alt="heart" />
+                      </div>
+                      <div class="educationItem">
+                        <h3 class="educationBoxTitle">UI/UX</h3>
+                        <div class="tags">
+                          <p>
+                            #UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux
+                          </p>
+                        </div>
+                      </div>
+                      <h4 class="schoolName">Coursera</h4>
+                    </div>
+                    <div class="educationBox">
+                      <div class="topBar">
+                        <h3 class="educationYear">2017</h3>
+                      </div>
+                      <div class="educationItem">
+                        <h3 class="educationBoxTitle">Graphic design</h3>
+                        <div class="tags">
+                          <p>#branding #web #illustration #adobe</p>
+                        </div>
+                      </div>
+                      <h4 class="schoolName">Coursera</h4>
+                    </div>
+                  </div>
+                  <div id="column-2">
+                    <div class="educationBox">
+                      <div class="topBar">
+                        <h3 class="educationYear">2017 - 2022</h3>
+                      </div>
+                      <div class="educationItem">
+                        <h3 class="educationBoxTitle">Law</h3>
+                        <div class="tags">
+                          <p>#law #legalStudies #contracts #internationalLaws</p>
+                        </div>
+                      </div>
+                      <h4 class="schoolName">University of Kerala</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profileExtra">
+                <div class="interestsBox resumeBox">
+                  <div class="title">
+                    <p class="nameTitle">Interests</p>
+                  </div>
+                  <div class="interestsList">
+                    <div class="interestsTag">branding</div>
+                    <div class="interestsTag">design</div>
+                    <div class="interestsTag">photography</div>
+                    <div class="interestsTag">artificial intelligence</div>
+                    <div class="interestsTag">illustration</div>
+                    <div class="interestsTag">typography</div>
+                    <div class="interestsTag">social networks</div>
+                    <div class="interestsTag">research</div>
+                    <div class="interestsTag">dron pilot</div>
+                    <div class="interestsTag">games</div>
+                  </div>
+                </div>
+                <div class="contactBox resumeBox">
+                  <div class="title">
+                    <p class="nameTitle">
+                      Let´s chat! I´m ready to work on excinting projects
+                    </p>
+                  </div>
+                  <div class="contactInfo">srkarthik.designscape@gmail.com</div>
+                </div>
               </div>
             </div>
           </div>
