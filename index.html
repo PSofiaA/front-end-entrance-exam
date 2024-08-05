@@ -13,17 +13,11 @@
   <body>
     <div id="app">
       <div class="mainContainer">
-        <div id="btnContainer">
+        <div>
           <button type="button" id="downloadBtn">Download PDF</button>
           <button type="button" id="editBtn">Edit</button>
           <button type="button" style="display: none" id="saveBtn">Save</button>
-          <button
-            type="button"
-            style="background-color: #d92f28; display: none"
-            id="cancelBtn"
-          >
-            Cancel
-          </button>
+          <button type="button" style="display: none" id="cancelBtn">Cancel</button>
         </div>
         <div id="bentoContainer">
           <div class="bentoFlexBox">
@@ -155,7 +149,7 @@
                 </div>
               </div>
               <div class="profileTools resumeBox">
-                <div class="title">
+                <div class="title" id="toolsTitle">
                   <p class="nameTitle editable">Tools</p>
                 </div>
                 <div class="toolsList">

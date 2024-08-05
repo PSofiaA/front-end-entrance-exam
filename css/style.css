@@ -66,6 +66,10 @@ button:hover {
   transform: translateY(-5px);
 }
 
+#cancelBtn {
+  background-color: #d92f28;
+}
+
 #bentoContainer {
   margin-bottom: 15px;
   max-width: 595px;
@@ -277,7 +281,6 @@ button:hover {
 .featuredPoints {
   display: flex;
   flex-direction: column;
-  /* margin-left: 8px; */
 }
 .points {
   padding-left: 8px;
@@ -286,19 +289,22 @@ button:hover {
 .profileTools {
   width: 124px;
   max-height: 359px;
+  gap: 12px;
 }
-
 .toolsList {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+}
+
+#toolsTitle {
+  margin-bottom: 14px;
 }
 
 .toolsWrapper {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: start;
 }
