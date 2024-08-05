@@ -38,7 +38,10 @@ function main() {
   const cancelBtn = document.getElementById("cancelBtn");
   const editableElements = document.querySelectorAll(".editable");
 
-  document.addEventListener("DOMContentLoaded", loadFromLocalStorage);
+  document.addEventListener("DOMContentLoaded", () => {
+    loadFromLocalStorage(editableElements);
+    saveToLocalStorage(editableElements);
+  });
   document.onclick = () => causeRippleWave(event);
 
   downloadBtn.addEventListener("click", function () {
