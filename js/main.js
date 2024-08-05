@@ -1,5 +1,3 @@
-// import "../css/style.css";
-
 function causeRippleWave(e) {
   const ripplePoint = document.createElement("div");
   ripplePoint.classList.add("ripple");
