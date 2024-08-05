@@ -440,3 +440,28 @@ button:hover {
   font-size: 10px;
   color: var(--contact-info-color);
 }
+
+/* Анимации */
+@keyframes customAni {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+[contentEditable="true"] {
+  cursor: pointer;
+  outline: none;
+  animation: customAni 2s ease 0s 1 normal none;
+}
+
+[contentEditable="true"]:hover {
+  transition: all 0.3s ease 0s;
+  scale: 1.1;
+}
