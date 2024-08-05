@@ -1,5 +1,16 @@
 import "../css/style.css";
 
+function causeRippleWave(e) {
+  const ripplePoint = document.createElement("div");
+  ripplePoint.classList.add("ripple");
+  document.body.appendChild(ripplePoint);
+
+  ripplePoint.style.left = `${e.clientX}px`;
+  ripplePoint.style.top = `${e.clientY}px`;
+
+  ripplePoint.onanimationend = () => document.body.removeChild(ripplePoint);
+}
+
 function saveToLocalStorage(editableElements) {
   editableElements.forEach((element, index) => {
     localStorage.setItem(index, element.innerHTML);
@@ -30,6 +41,7 @@ function main() {
   const editableElements = document.querySelectorAll(".editable");
 
   document.addEventListener("DOMContentLoaded", loadFromLocalStorage);
+  document.onclick = () => causeRippleWave(event);
 
   downloadBtn.addEventListener("click", function () {
     const cvContent = document.getElementById("bentoContainer");

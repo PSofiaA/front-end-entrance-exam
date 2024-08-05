@@ -441,7 +441,7 @@ button:hover {
   color: var(--contact-info-color);
 }
 
-/* Анимации */
+/* Анимации редактирования */
 @keyframes customAni {
   0% {
     transform: scale(1);
@@ -464,4 +464,21 @@ button:hover {
 [contentEditable="true"]:hover {
   transition: all 0.3s ease 0s;
   scale: 1.1;
+}
+
+/* Wave Ripple */
+.ripple {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  animation: rippleWave 0.4s linear;
+}
+
+@keyframes rippleWave {
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
 }
