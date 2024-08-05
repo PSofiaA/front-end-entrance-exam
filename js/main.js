@@ -3,8 +3,8 @@ function causeRippleWave(e) {
   ripplePoint.classList.add("ripple");
   document.body.appendChild(ripplePoint);
 
-  ripplePoint.style.left = `${e.clientX}px`;
-  ripplePoint.style.top = `${e.clientY}px`;
+  ripplePoint.style.left = `${e.pageX}px`;
+  ripplePoint.style.top = `${e.pageY}px`;
 
   ripplePoint.onanimationend = () => document.body.removeChild(ripplePoint);
 }
