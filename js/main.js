@@ -1,24 +1,84 @@
-import '../css/style.css'
-import javascriptLogo from '../javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+function causeRippleWave(e) {
+  const ripplePoint = document.createElement("div");
+  ripplePoint.classList.add("ripple");
+  document.body.appendChild(ripplePoint);
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+  ripplePoint.style.left = `${e.clientX}px`;
+  ripplePoint.style.top = `${e.clientY}px`;
 
-setupCounter(document.querySelector('#counter'))
+  ripplePoint.onanimationend = () => document.body.removeChild(ripplePoint);
+}
+
+function saveToLocalStorage(editableElements) {
+  editableElements.forEach((element, index) => {
+    localStorage.setItem(index, element.innerHTML);
+  });
+}
+
+function loadFromLocalStorage(editableElements) {
+  Array.from(editableElements).forEach((element, index) => {
+    const savedContent = localStorage.getItem(index);
+    if (savedContent) {
+      element.innerHTML = savedContent;
+    }
+  });
+}
+
+function mainModeVisibilty(downloadBtn, editBtn, saveBtn, cancelBtn) {
+  downloadBtn.style.display = "inline";
+  editBtn.style.display = "inline";
+  saveBtn.style.display = "none";
+  cancelBtn.style.display = "none";
+}
+
+function main() {
+  const downloadBtn = document.getElementById("downloadBtn");
+  const editBtn = document.getElementById("editBtn");
+  const saveBtn = document.getElementById("saveBtn");
+  const cancelBtn = document.getElementById("cancelBtn");
+  const editableElements = document.querySelectorAll(".editable");
+
+  document.addEventListener("DOMContentLoaded", loadFromLocalStorage);
+  document.onclick = () => causeRippleWave(event);
+
+  downloadBtn.addEventListener("click", function () {
+    const cvContent = document.getElementById("bentoContainer");
+    var opt = {
+      margin: 1,
+      filename: "CV.pdf",
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+    };
+    html2pdf().set(opt).from(cvContent).save();
+  });
+
+  editBtn.addEventListener("click", function () {
+    saveToLocalStorage(editableElements);
+
+    editableElements.forEach((elem) => {
+      elem.setAttribute("contenteditable", "true");
+    });
+    downloadBtn.style.display = "none";
+    editBtn.style.display = "none";
+    saveBtn.style.display = "inline";
+    cancelBtn.style.display = "inline";
+  });
+
+  saveBtn.addEventListener("click", () => {
+    editableElements.forEach((element, index) => {
+      localStorage.setItem(index, element.innerHTML);
+      element.contentEditable = "false";
+    });
+    mainModeVisibilty(downloadBtn, editBtn, saveBtn, cancelBtn);
+  });
+
+  cancelBtn.addEventListener("click", () => {
+    editableElements.forEach((element, index) => {
+      const initialContent = localStorage.getItem(index);
+      element.innerHTML = initialContent;
+      element.contentEditable = "false";
+    });
+    mainModeVisibilty(downloadBtn, editBtn, saveBtn, cancelBtn);
+  });
+}
+main();

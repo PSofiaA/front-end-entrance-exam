@@ -1,13 +1,276 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>CV</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="mainContainer">
+        <div>
+          <button type="button" id="downloadBtn">Download PDF</button>
+          <button type="button" id="editBtn">Edit</button>
+          <button type="button" style="display: none" id="saveBtn">Save</button>
+          <button type="button" style="display: none" id="cancelBtn">Cancel</button>
+        </div>
+        <div id="bentoContainer">
+          <div class="bentoFlexBox">
+            <div class="top resumeRow">
+              <div class="profileImg resumeBox">
+                <img src="public/profileImgKarthik.png" alt="profilePic" />
+              </div>
+
+              <div class="profileName resumeBox">
+                <p class="greetingPhrase editable">Hello 👋🏻 I’m</p>
+                <div class="yourInfo">
+                  <p id="yourName" class="editable">Karthik SR</p>
+                  <p id="yourRole" class="editable">UX/UI Designer</p>
+                </div>
+              </div>
+
+              <div class="profileLanguages resumeBox">
+                <div class="title">
+                  <p class="nameTitle editable">Languages</p>
+                </div>
+                <div class="listLenguages">
+                  <div class="nameLenguage">
+                    <p class="editable">English</p>
+                    <p class="editable">Malayalam</p>
+                    <p class="editable">Hindi</p>
+                  </div>
+                  <div class="levelLenguage">
+                    <hr class="progressBar" />
+                    <div class="progressBar"></div>
+                    <div class="progressBar bottomBar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="center resumeRow">
+              <div class="profileExperience resumeBox">
+                <div class="title">
+                  <p class="nameTitle editable">Experience</p>
+                </div>
+
+                <div class="jobList">
+                  <div id="lastJob" class="jobBox">
+                    <div class="topBar">
+                      <p class="date editable">Jun. 2023 - Present</p>
+                      <div class="tag">
+                        <p class="editable">most recent</p>
+                      </div>
+                    </div>
+                    <div class="contentExp">
+                      <div class="jobInfo">
+                        <p class="roleName editable">Marketing Manager</p>
+                        <div class="aboutJob lastJobDescr">
+                          <p class="editable">Pankayam</p>
+                          <p class="editable">|</p>
+                          <p class="editable">Full-time</p>
+                        </div>
+                      </div>
+                      <div class="featuredPoints">
+                        <ul class="points">
+                          <li class="editable">
+                            Strategy development and planning of campaigns that promote
+                            the business and generate genuine traffic
+                          </li>
+                          <li class="editable">
+                            SEO Content Creation for Blogs, Website, Social media
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="jobBox otherJob">
+                    <div class="topBar">
+                      <p class="date editable">2017 - Present</p>
+                    </div>
+                    <div class="contentExp">
+                      <div class="jobInfo">
+                        <p class="roleName editable">Graphic / Web designer</p>
+                        <div class="aboutJob otherJobDesr">
+                          <p class="info editable">Freelance</p>
+                        </div>
+                      </div>
+                      <div class="featuredPoints">
+                        <ul class="points">
+                          <li class="editable">
+                            Development of internal projects from scratch, product design
+                            of brands
+                          </li>
+                          <li class="editable">Landing page, webapps and hybrid apps</li>
+                          <li class="editable">
+                            Coordinating with outside agencies, art services, web
+                            designer, marketing, printers, and colleagues as necessary.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobBox otherJob">
+                    <div class="topBar">
+                      <p class="date editable">Sep. 2021 - Jun. 2023</p>
+                    </div>
+                    <div class="contentExp">
+                      <div class="jobInfo">
+                        <p class="roleName editable">Legal Assistant</p>
+                        <div class="aboutJob otherJobDesr">
+                          <p class="info editable">Law Firm</p>
+                          <p class="editable">|</p>
+                          <p class="editable">Intern</p>
+                        </div>
+                      </div>
+                      <div class="featuredPoints">
+                        <ul class="points">
+                          <li class="editable">
+                            Provide administrative support to lawyer and enhance office
+                            effectiveness
+                          </li>
+                          <li class="editable">
+                            Handle communication with clients, witnesses etc.
+                          </li>
+                          <li class="editable">
+                            Repare case briefs and summarize depositions, interrogatories
+                            and testimony
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profileTools resumeBox">
+                <div class="title" id="toolsTitle">
+                  <p class="nameTitle editable">Tools</p>
+                </div>
+                <div class="toolsList">
+                  <div class="toolsWrapper">
+                    <div class="toolsTag editable">design</div>
+                    <div class="toolsBox">
+                      <img src="public/tools/logoFigma.svg" alt="logo" />
+                      <img src="public/tools/logoPhotoshop.svg" alt="logo" />
+                      <img src="public/tools/logoAdobe.svg" alt="logo" />
+                      <img src="public/tools/logoPremiere.svg" alt="logo" />
+                      <img src="public/tools/logoNotion.svg" alt="logo" />
+                      <img src="public/tools/logoMeet.svg" alt="logo" />
+                    </div>
+                  </div>
+                  <div class="toolsWrapper">
+                    <div class="toolsTag editable">no-code</div>
+                    <div class="toolsBox">
+                      <img src="public/tools/logoZapìer1.svg" alt="logo" />
+                      <img src="public/tools/logoWebflow.svg" alt="logo" />
+                      <img src="public/tools/logoFramer.svg" alt="logo" />
+                      <img src="public/tools/logoWordpress.svg" alt="logo" />
+                    </div>
+                  </div>
+                  <div class="toolsWrapper">
+                    <div class="toolsTag editable">artoficial intelligence</div>
+                    <div class="toolsBox">
+                      <img src="public/tools/logoChatGPT1.svg" alt="logo" />
+                      <img src="public/tools/logoCopilot1.svg" alt="logo" />
+                      <img src="public/tools/logoMidjourney1.svg" alt="logo" />
+                      <img src="public/tools/logoMidjourney3.png" alt="logo" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom resumeRow">
+              <div class="profileEducation resumeBox">
+                <div class="title">
+                  <p class="nameTitle editable">Education</p>
+                </div>
+                <div class="educationContent">
+                  <div id="column-1">
+                    <div id="lastEducation" class="educationBox">
+                      <div class="topBar">
+                        <h3 class="educationYear editable">2023</h3>
+                        <img src="public/Vector.svg" alt="heart" />
+                      </div>
+                      <div class="educationItem">
+                        <h3 class="educationBoxTitle editable">UI/UX</h3>
+                        <div class="tags editable">
+                          <p>
+                            #UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux
+                          </p>
+                        </div>
+                      </div>
+                      <h4 class="schoolName editable">Coursera</h4>
+                    </div>
+                    <div class="educationBox">
+                      <div class="topBar">
+                        <h3 class="educationYear editable">2017</h3>
+                      </div>
+                      <div class="educationItem">
+                        <h3 class="educationBoxTitle editable">Graphic design</h3>
+                        <div class="tags editable">
+                          <p>#branding #web #illustration #adobe</p>
+                        </div>
+                      </div>
+                      <h4 class="schoolName editable">Coursera</h4>
+                    </div>
+                  </div>
+                  <div id="column-2">
+                    <div class="educationBox">
+                      <div class="topBar">
+                        <h3 class="educationYear editable">2017 - 2022</h3>
+                      </div>
+                      <div class="educationItem">
+                        <h3 class="educationBoxTitle editable">Law</h3>
+                        <div class="tags editable">
+                          <p>#law #legalStudies #contracts #internationalLaws</p>
+                        </div>
+                      </div>
+                      <h4 class="schoolName editable">University of Kerala</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profileExtra">
+                <div class="interestsBox resumeBox">
+                  <div class="title">
+                    <p class="nameTitle editable">Interests</p>
+                  </div>
+                  <div class="interestsList">
+                    <div class="interestsTag editable">branding</div>
+                    <div class="interestsTag editable">design</div>
+                    <div class="interestsTag editable">photography</div>
+                    <div class="interestsTag editable">artificial intelligence</div>
+                    <div class="interestsTag editable">illustration</div>
+                    <div class="interestsTag editable">typography</div>
+                    <div class="interestsTag editable">social networks</div>
+                    <div class="interestsTag editable">research</div>
+                    <div class="interestsTag editable">dron pilot</div>
+                    <div class="interestsTag editable">games</div>
+                  </div>
+                </div>
+                <div class="contactBox resumeBox">
+                  <div class="title">
+                    <p class="nameTitle editable">
+                      Let´s chat! I´m ready to work on excinting projects
+                    </p>
+                  </div>
+                  <div class="contactInfo editable">srkarthik.designscape@gmail.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
   </body>
 </html>
